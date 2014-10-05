@@ -1,0 +1,2 @@
+grant all privileges on cs5200.* to
+'YOURUSER'@'localhost' identified by 'YOURPASSWORD';
