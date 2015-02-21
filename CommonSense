@@ -1,2 +1,11 @@
 "just turn off safe mode":
 SET SQL_SAFE_UPDATES = 0;
+Leetcode:
+select d.name as Department,e.Name as Employee,e.Salary as Salary
+from Employee e,Department d,
+(select e.DepartmentID as i,max(e.Salary) as m
+from Employee e
+group by DepartmentId) t
+where e.DepartmentID = d.Id 
+and e.DepartmentID = t.i
+and e.Salary = t.m;
